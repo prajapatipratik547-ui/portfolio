@@ -799,3 +799,65 @@ body, .header, .mobile-nav, .cloud, .loader,
 .slide__media--soon{ cursor:default; }
 .slide__media--soon:hover .art{ transform:none; }
 .slide__media--soon:hover::after{ opacity:0; }
+
+/* ── Project stats (resume metrics on the media panel) ──── */
+/* the decorative rings would sit under the numbers, so they fade back */
+.slide__media--stats .art::before,
+.slide__media--stats .art::after{ opacity:.18; }
+.panel__stats{
+  position:absolute; top:0; left:0; right:0; z-index:3;
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.panel__stats li{
+  display:grid; gap:.3rem; align-content:start;
+  padding:.95rem 1.1rem .9rem; color:#fff;
+}
+.panel__stats li + li{ border-left:1px solid rgba(255,255,255,.18); }
+.panel__stats b{
+  font-family:var(--display); font-weight:400; line-height:1;
+  font-size:clamp(1.35rem,2.4vw,2.2rem); white-space:nowrap;
+}
+.panel__stats span{
+  font:700 .58rem/1.25 var(--cond); letter-spacing:.12em; text-transform:uppercase; opacity:.72;
+}
+.slide__media--stats .panel__blurb{ font-size:.86rem; line-height:1.5; }
+.panel{ min-height:clamp(330px,50vh,500px); }
+
+@media (max-width:900px){
+  .slide__media--stats{ min-height:320px; }
+}
+@media (max-width:520px){
+  .panel__stats li{ padding:.75rem .7rem; }
+  .slide__media--stats{ min-height:330px; }
+}
+
+/* ── Lab: earlier builds ────────────────────────────────── */
+.lab{ position:relative; padding:clamp(3.5rem,9vh,6rem) 0 clamp(2.5rem,6vh,4rem); border-top:2px solid var(--ink); }
+.lab__grid{
+  max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gutter);
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));
+  gap:clamp(1.2rem,2.5vw,2rem);
+}
+.exp{
+  position:relative; display:grid; gap:.7rem; align-content:start;
+  padding:clamp(1.2rem,2.2vw,1.8rem);
+  border:1px dashed rgba(10,10,10,.5);
+  transition:background .35s var(--ease), transform .35s var(--ease);
+}
+.exp:hover{ background:rgba(255,255,255,.08); transform:translateY(-4px); }
+.exp__code{ font-family:var(--display); font-size:clamp(2.2rem,4vw,3.2rem); line-height:.9; }
+.exp h3{ font-family:var(--display); font-weight:400; font-size:clamp(1.2rem,1.8vw,1.6rem); line-height:1; text-transform:uppercase; }
+.exp p{ font-size:.95rem; line-height:1.5; max-width:46ch; }
+.exp .panel__links{ margin-top:.4rem; }
+
+/* resume skill lists differ in length (6 to 14 items): each card hangs at
+   its own height instead of stretching to the longest one */
+.services__track{ align-items:flex-start; }
+.card__word{ font-size:clamp(2.4rem,4.6vw,3.8rem); padding-bottom:.5rem; }
+.card__pair{ padding:.55rem 1rem .8rem; font-size:clamp(1.2rem,2.2vw,1.7rem); }
+/* more air between the heading and the rail now that the cards run longer */
+.services__pin{ gap:clamp(4.4rem,9.5vh,6rem); padding-block:clamp(1.2rem,3vh,3rem); }
+/* the bio column sat in a stretched grid row, so it spread its children
+   apart to match the (now longer) timeline */
+.about__bio{ align-content:start; }

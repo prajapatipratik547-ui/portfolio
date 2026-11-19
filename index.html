@@ -4,12 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pratik Prajapati — AI/ML Engineer</title>
-<meta name="description" content="Portfolio of Pratik Prajapati — an AI/ML engineer building at the intersection of artificial intelligence, software engineering and curiosity.">
+<meta name="description" content="Portfolio of Pratik Prajapati — AI/ML engineering undergraduate building RAG systems and LLM agents with measured, citation-grounded results.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://portfolio-pratik-projects2.vercel.app/">
+<meta name="theme-color" content="#3733fd">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://portfolio-pratik-projects2.vercel.app/">
+<meta property="og:title" content="Pratik Prajapati — AI/ML Engineer">
+<meta property="og:description" content="AI/ML engineer focused on LLMs, RAG and LLM evaluation. Robotics Hybrid RAG, ResearchLens AI, Satark AI and HawaSaathi.">
+<meta property="og:image" content="https://portfolio-pratik-projects2.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pratik Prajapati — AI/ML Engineer">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=1787058993">
+<link rel="stylesheet" href="css/style.css?v=20261119f">
 </head>
 
 <body>
@@ -59,8 +72,8 @@
     <a class="nav__link" href="#work"     data-split>Work</a>
     <a class="nav__link" href="#services" data-split>Services</a>
     <a class="nav__link" href="#about"    data-split>About</a>
-    <a class="nav__link" href="#contact"  data-split>Contact</a>
     <a class="nav__link" href="#lab"      data-split>Lab</a>
+    <a class="nav__link" href="#contact"  data-split>Contact</a>
   </nav>
 
   <div class="header__right">
@@ -72,7 +85,7 @@
 </header>
 
 <div class="mobile-nav" id="mobileNav" inert>
-  <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#lab">Lab</a>
+  <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#lab">Lab</a><a href="#contact">Contact</a>
 </div>
 
 <main id="main">
@@ -99,10 +112,10 @@
         <div class="hero__rule" aria-hidden="true"></div>
 
         <p class="hero__lede" data-reveal>
-          You've arrived at the portfolio of <strong>Pratik Prajapati</strong> — an AI/ML Engineer in
-          the making, building at the intersection of artificial intelligence, software engineering,
-          and curiosity. I enjoy turning ambitious ideas into intelligent products and experimenting
-          with what technology can do next. Take a look around.
+          You've arrived at the portfolio of <strong>Pratik Prajapati</strong> — an AI/ML engineering
+          undergraduate focused on LLMs, RAG and LLM evaluation. I build and deploy RAG systems and
+          LLM agents with measured, citation-grounded results, and I'm looking for AI/ML Engineer
+          internships. Take a look around.
         </p>
       </div>
 
@@ -122,10 +135,10 @@
   <!-- ══ TICKER ══ -->
   <div class="ticker ticker--edge" aria-hidden="true">
     <div class="ticker__track" data-marquee data-dir="1">
-      <span>Machine Learning</span><i>◆</i><span>Deep Learning</span><i>◆</i><span>LLMs</span><i>◆</i>
-      <span>Computer Vision</span><i>◆</i><span>MLOps</span><i>◆</i><span>Data Engineering</span><i>◆</i>
-      <span>Machine Learning</span><i>◆</i><span>Deep Learning</span><i>◆</i><span>LLMs</span><i>◆</i>
-      <span>Computer Vision</span><i>◆</i><span>MLOps</span><i>◆</i><span>Data Engineering</span><i>◆</i>
+      <span>LLMs</span><i>◆</i><span>RAG</span><i>◆</i><span>Hybrid Search</span><i>◆</i><span>LLM Evaluation</span><i>◆</i>
+      <span>AI Agents</span><i>◆</i><span>Computer Vision</span><i>◆</i><span>NLP</span><i>◆</i><span>MLOps</span><i>◆</i>
+      <span>LLMs</span><i>◆</i><span>RAG</span><i>◆</i><span>Hybrid Search</span><i>◆</i><span>LLM Evaluation</span><i>◆</i>
+      <span>AI Agents</span><i>◆</i><span>Computer Vision</span><i>◆</i><span>NLP</span><i>◆</i><span>MLOps</span><i>◆</i>
     </div>
   </div>
 
@@ -140,149 +153,94 @@
     <div class="carousel" id="carousel">
       <div class="carousel__viewport">
         <ul class="carousel__track" id="track">
-
           <li class="slide">
             <article class="panel">
               <div class="panel__left">
-                <span class="panel__code">ELA</span>
+                <span class="panel__code">RHR</span>
                 <div class="panel__card panel__card--1">
-                  <span class="panel__kicker">Project</span>
-                  <h3>Election Assistant</h3>
-                  <ul class="tags"><li>Gemini API</li><li>React</li><li>Vite</li><li>AI</li></ul>
+                  <span class="panel__kicker">Project &middot; Hybrid-search RAG</span>
+                  <h3>Robotics Hybrid RAG</h3>
+                  <ul class="tags"><li>Python</li><li>Qdrant</li><li>BM25</li><li>FastEmbed</li><li>Cross-encoder</li><li>ragas</li><li>Groq</li><li>Streamlit</li></ul>
                   <div class="panel__links">
-                    <a class="btn-work" href="https://election-assistant-amber-ten.vercel.app" target="_blank" rel="noopener noreferrer">View work <i>&#8594;</i></a>
-                    <a class="btn-code" href="https://github.com/prajapatipratik547-ui/election-assistant" target="_blank" rel="noopener noreferrer" aria-label="Election Assistant source code on GitHub">Code</a>
+                    <a class="btn-work" href="https://robotics-rag.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo <i>&#8594;</i></a>
+                    <a class="btn-code" href="https://github.com/prajapatipratik547-ui/robotics-rag" target="_blank" rel="noopener noreferrer" aria-label="Robotics Hybrid RAG source code on GitHub">Code</a>
                   </div>
                 </div>
               </div>
-              <a class="slide__media" href="https://election-assistant-amber-ten.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View Election Assistant (opens live demo in a new tab)">
-                <span class="art art--1"></span>
-                <span class="panel__blurb">AI-powered assistant explaining election processes, timelines and key steps. Google Gemini API as the intelligence layer, a 10-step visual timeline, a scored knowledge quiz and Hindi/English support.</span>
-                <span class="panel__count">1<s>/</s>3</span>
+              <a class="slide__media slide__media--stats" href="https://robotics-rag.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="View Robotics Hybrid RAG (opens live demo in a new tab)">
+                <span class="art art--2"></span>
+                <ul class="panel__stats"><li><b>95%</b><span>Hit@5, up from 84%</span></li><li><b>0.957</b><span>faithfulness (ragas)</span></li><li><b>4&times;</b><span>faster reranker</span></li></ul>
+                <span class="panel__blurb">RAG assistant over 32 hardware datasheets and ROS&nbsp;2 Nav2 docs (906 chunks) that cites the exact page for every answer, and says so when the docs don&rsquo;t cover it. Dense + BM25 fused with RRF lifted MRR from 0.695 to 0.804 on an 85-question test set (paired-bootstrap 95% CIs). Five rerankers benchmarked; 0.90 answer accuracy; 24 pytest tests in CI.</span>
+                <span class="panel__count">1<s>/</s>4</span>
               </a>
             </article>
           </li>
-
 
           <li class="slide">
             <article class="panel">
               <div class="panel__left">
-                <span class="panel__code">ATP</span>
-                <div class="panel__card panel__card--3">
-                  <span class="panel__kicker">Project</span>
-                  <h3>AI Tips Auto-Poster</h3>
-<ul class="tags"><li>Generative AI</li><li>N8N</li><li>APIs</li></ul>
-
-<div class="panel__links">
-  <a
-    class="btn-work"
-    href="https://pratik-ai-lab.app.n8n.cloud/workflow/ffj2F0YkTHkL0esp"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View work <i>&#8594;</i>
-  </a>
-
-  <a
-    class="btn-code"
-    href="https://github.com/prajapatipratik547-ui/ai-tips-auto-poster"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="AI Tips Auto-Poster source code on GitHub"
-  >
-    Code
-  </a>
-</div>
-              <a
-                class="slide__media"
-                href="https://pratik-ai-lab.app.n8n.cloud/workflow/ffj2F0YkTHkL0esp"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View AI Tips Auto-Poster workflow in n8n (opens in a new tab)"
-              >
-                <span class="art art--3"></span>
-                <span class="panel__blurb">Automation workflow that generates technology and AI content, then pushes it through an automated social-publishing pipeline built on N8N and APIs.</span>
-                <span class="panel__count">2<s>/</s>3</span>
+                <span class="panel__code">RLA</span>
+                <div class="panel__card panel__card--2">
+                  <span class="panel__kicker">Project &middot; Multi-document RAG</span>
+                  <h3>ResearchLens AI</h3>
+                  <ul class="tags"><li>RAG</li><li>LLMs</li><li>Google Gemini</li><li>Embeddings</li><li>MongoDB Atlas</li></ul>
+                  <div class="panel__links">
+                    <a class="btn-work" href="https://researchlens-ai-frontend.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo <i>&#8594;</i></a>
+                    <a class="btn-code" href="https://github.com/prajapatipratik547-ui/researchlens-ai" target="_blank" rel="noopener noreferrer" aria-label="ResearchLens AI source code on GitHub">Code</a>
+                  </div>
+                </div>
+              </div>
+              <a class="slide__media slide__media--stats" href="https://researchlens-ai-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View ResearchLens AI (opens live demo in a new tab)">
+                <span class="art art--1"></span>
+                <ul class="panel__stats"><li><b>3</b><span>file formats: PDF, DOCX, TXT</span></li><li><b>Cited</b><span>file + page, every claim</span></li><li><b>Verified</b><span>verbatim quotes</span></li></ul>
+                <span class="panel__blurb">Research platform that answers strictly from your uploaded documents. Verbatim quote checks, server-side citations, confidence caps and an &ldquo;insufficient evidence&rdquo; fallback keep it from hallucinating. Surfaces key findings, contradictions and research gaps across documents. Deployed on Vercel, Render and MongoDB Atlas.</span>
+                <span class="panel__count">2<s>/</s>4</span>
               </a>
             </article>
           </li>
 
-                    <li class="slide">
+          <li class="slide">
             <article class="panel">
               <div class="panel__left">
-                <span class="panel__code">TDG</span>
-
-                <div class="panel__card panel__card--4">
-                  <span class="panel__kicker">Project</span>
-
-                  <h3>Technical Documentation Generator</h3>
-
-                  <ul class="tags">
-                    <li>LLMs</li>
-                    <li>AI Agents</li>
-                    <li>RAG</li>
-                  </ul>
-
+                <span class="panel__code">SAT</span>
+                <div class="panel__card panel__card--3">
+                  <span class="panel__kicker">Project &middot; LLM scam detector</span>
+                  <h3>Satark AI</h3>
+                  <ul class="tags"><li>Gemini 2.5 Flash</li><li>TypeScript</li><li>React</li><li>Express</li><li>Zod</li><li>Docker</li></ul>
                   <div class="panel__links">
-                    <a
-                      class="btn-work"
-                      href="https://ai-technical-documentation-generato.vercel.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View work <i>&#8594;</i>
-                    </a>
-
-                    <a
-                      class="btn-code"
-                      href="https://github.com/prajapatipratik547-ui/ai-technical-documentation-generator"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Technical Documentation Generator source code on GitHub"
-                    >
-                      Code
-                    </a>
+                    <a class="btn-work" href="https://satark-ai-k8f6.onrender.com" target="_blank" rel="noopener noreferrer">Live demo <i>&#8594;</i></a>
+                    <a class="btn-code" href="https://github.com/prajapatipratik547-ui/Satark-ai" target="_blank" rel="noopener noreferrer" aria-label="Satark AI source code on GitHub">Code</a>
                   </div>
                 </div>
               </div>
+              <a class="slide__media slide__media--stats" href="https://satark-ai-k8f6.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="View Satark AI (opens live demo in a new tab)">
+                <span class="art art--3"></span>
+                <ul class="panel__stats"><li><b>208</b><span>tests, ~82% coverage</span></li><li><b>8</b><span>Indian languages</span></li><li><b>100</b><span>Lighthouse accessibility</span></li></ul>
+                <span class="panel__blurb">Scam checker for texts and screenshots: a 31-rule engine (English, Hindi, Hinglish) merged with Gemini structured JSON into a 0&ndash;100 risk score. Hardened against prompt injection with per-request boundaries and schema-only output; OTP, Aadhaar, PAN and card numbers are masked before any API call. Built for PromptWars &times; Kick To Tech 2026.</span>
+                <span class="panel__count">3<s>/</s>4</span>
+              </a>
+            </article>
+          </li>
 
-              <a
-                class="slide__media"
-                href="https://ai-technical-documentation-generator.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Technical Documentation Generator live application"
-              >
-                <span class="art art--4"></span>
-
-                <span class="panel__blurb">
-                  AI-powered developer tool that analyzes a software codebase
-                  and generates structured technical documentation using
-                  LLM-powered analysis.
-                </span>
-
-                <span class="panel__count">3</span>
-                <div class="panel__links">
-
-    <a
-        class="btn-work"
-        href="https://ai-technical-documentation-generator.vercel.app"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        View Work <i>&#8594;</i>
-    </a>
-
-    <a
-        class="btn-work"
-        href="https://github.com/prajapatipratik547-ui/ai-technical-documentation-generator"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        Code <i>&#8594;</i>
-    </a>
-
-</div>
+          <li class="slide">
+            <article class="panel">
+              <div class="panel__left">
+                <span class="panel__code">HWS</span>
+                <div class="panel__card panel__card--5">
+                  <span class="panel__kicker">Project &middot; AI air-quality agent</span>
+                  <h3>HawaSaathi</h3>
+                  <ul class="tags"><li>Python</li><li>FastAPI</li><li>Groq tool calling</li><li>Whisper</li><li>Supabase</li><li>Telegram Bot API</li></ul>
+                  <div class="panel__links">
+                    <a class="btn-work" href="https://t.me/HawaSaathiBot" target="_blank" rel="noopener noreferrer">Try it <i>&#8594;</i></a>
+                    <a class="btn-code" href="https://github.com/prajapatipratik547-ui/hawasaathi" target="_blank" rel="noopener noreferrer" aria-label="HawaSaathi source code on GitHub">Code</a>
+                  </div>
+                </div>
+              </div>
+              <a class="slide__media slide__media--stats" href="https://t.me/HawaSaathiBot" target="_blank" rel="noopener noreferrer" aria-label="Try HawaSaathi on Telegram (opens in a new tab)">
+                <span class="art art--5"></span>
+                <ul class="panel__stats"><li><b>3</b><span>languages</span></li><li><b>Voice</b><span>input via Whisper</span></li><li><b>Live</b><span>AQI through tool calls</span></li></ul>
+                <span class="panel__blurb">Telegram assistant that sends personalised daily and spike air-quality alerts and answers questions in English, Hindi and Marathi, by text or voice. A tool-calling agent (Groq, gpt-oss-120b) fetches live AQI, forecasts and user profiles instead of guessing numbers, with a rule-based fallback when the model is slow or rate-limited. Built for Code for a Billion.</span>
+                <span class="panel__count">4<s>/</s>4</span>
               </a>
             </article>
           </li>
@@ -314,69 +272,80 @@
       <div class="services__track" id="svcTrack">
 
         <article class="card">
-          <span class="card__clip"><b>MLE</b><i>01</i></span>
-          <span class="card__word">ML</span>
+          <span class="card__clip"><b>LNG</b><i>01</i></span>
+          <span class="card__word">CODE</span>
           <div class="card__panel">
-            <span class="card__kicker">Discipline</span>
-            <h3>Machine Learning</h3>
-            <ul><li>Supervised</li><li>Unsupervised</li><li>Feature Eng</li><li>scikit-learn</li><li>Evaluation</li><li>Tuning</li></ul>
+            <span class="card__kicker">Skills</span>
+            <h3>Languages</h3>
+            <ul><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>C++</li><li>SQL</li><li>Bash</li></ul>
           </div>
-          <span class="card__pair">DAT <i>→</i> MDL</span>
+          <span class="card__pair">SRC <i>&rarr;</i> RUN</span>
         </article>
 
         <article class="card">
-          <span class="card__clip"><b>DLN</b><i>02</i></span>
-          <span class="card__word">DL</span>
+          <span class="card__clip"><b>MLE</b><i>02</i></span>
+          <span class="card__word">ML</span>
           <div class="card__panel">
-            <span class="card__kicker">Discipline</span>
-            <h3>Deep Learning</h3>
-            <ul><li>PyTorch</li><li>TensorFlow</li><li>CNNs</li><li>Transformers</li><li>Fine-tuning</li><li>GPUs</li></ul>
+            <span class="card__kicker">Skills</span>
+            <h3>Machine Learning</h3>
+            <ul><li>Machine Learning</li><li>Deep Learning</li><li>Computer Vision</li><li>NLP</li><li>Transformers</li><li>Data Preprocessing</li><li>Feature Engineering</li><li>Model Evaluation</li></ul>
           </div>
-          <span class="card__pair">NET <i>→</i> INF</span>
+          <span class="card__pair">DAT <i>&rarr;</i> MDL</span>
         </article>
 
         <article class="card">
           <span class="card__clip"><b>GEN</b><i>03</i></span>
           <span class="card__word">GEN</span>
           <div class="card__panel">
-            <span class="card__kicker">Discipline</span>
-            <h3>Generative AI</h3>
-            <ul><li>LLMs</li><li>RAG</li><li>Embeddings</li><li>Agents</li><li>Prompting</li><li>Evals</li></ul>
+            <span class="card__kicker">Skills</span>
+            <h3>Generative AI &amp; LLMs</h3>
+            <ul><li>LLMs</li><li>RAG</li><li>Hybrid Search (Dense + BM25)</li><li>Reranking</li><li>Embeddings</li><li>Semantic Search</li><li>Prompt Engineering</li><li>AI Agents</li><li>Tool Calling</li><li>Structured Outputs</li><li>LLM Evaluation (ragas)</li><li>Hallucination Mitigation</li><li>Prompt-Injection Defense</li></ul>
           </div>
-          <span class="card__pair">PMT <i>→</i> OUT</span>
+          <span class="card__pair">QRY <i>&rarr;</i> ANS</span>
         </article>
 
         <article class="card">
-          <span class="card__clip"><b>DAT</b><i>04</i></span>
-          <span class="card__word">DAT</span>
+          <span class="card__clip"><b>FWK</b><i>04</i></span>
+          <span class="card__word">LIB</span>
           <div class="card__panel">
-            <span class="card__kicker">Discipline</span>
-            <h3>Data Engineering</h3>
-            <ul><li>Pandas</li><li>SQL</li><li>Spark</li><li>Airflow</li><li>ETL</li><li>Warehousing</li></ul>
+            <span class="card__kicker">Skills</span>
+            <h3>Frameworks &amp; Libraries</h3>
+            <ul><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>XGBoost</li><li>Hugging Face Transformers</li><li>Sentence Transformers</li><li>FastEmbed</li><li>LangChain</li><li>LangGraph</li><li>OpenCV</li><li>NumPy</li><li>Pandas</li><li>Streamlit</li><li>React</li></ul>
           </div>
-          <span class="card__pair">RAW <i>→</i> SET</span>
+          <span class="card__pair">LIB <i>&rarr;</i> APP</span>
         </article>
 
         <article class="card">
-          <span class="card__clip"><b>OPS</b><i>05</i></span>
+          <span class="card__clip"><b>VDB</b><i>05</i></span>
+          <span class="card__word">VEC</span>
+          <div class="card__panel">
+            <span class="card__kicker">Skills</span>
+            <h3>Vector Stores &amp; Databases</h3>
+            <ul><li>Qdrant</li><li>FAISS</li><li>PostgreSQL</li><li>Supabase</li><li>MongoDB</li><li>Redis</li></ul>
+          </div>
+          <span class="card__pair">VEC <i>&rarr;</i> HIT</span>
+        </article>
+
+        <article class="card">
+          <span class="card__clip"><b>OPS</b><i>06</i></span>
           <span class="card__word">OPS</span>
           <div class="card__panel">
-            <span class="card__kicker">Discipline</span>
-            <h3>MLOps</h3>
-            <ul><li>Docker</li><li>Kubernetes</li><li>MLflow</li><li>CI/CD</li><li>Monitoring</li><li>Cloud</li></ul>
+            <span class="card__kicker">Skills</span>
+            <h3>MLOps &amp; Deployment</h3>
+            <ul><li>Docker</li><li>Kubernetes</li><li>Docker Compose</li><li>MLflow</li><li>GitHub Actions</li><li>CI/CD</li><li>Model Serving</li><li>Experiment Tracking</li><li>FastAPI</li><li>Express</li><li>REST APIs</li><li>Pydantic</li><li>Zod</li></ul>
           </div>
-          <span class="card__pair">DEV <i>→</i> PRD</span>
+          <span class="card__pair">DEV <i>&rarr;</i> PRD</span>
         </article>
 
         <article class="card">
-          <span class="card__clip"><b>SWE</b><i>06</i></span>
-          <span class="card__word">SWE</span>
+          <span class="card__clip"><b>CLD</b><i>07</i></span>
+          <span class="card__word">CLD</span>
           <div class="card__panel">
-            <span class="card__kicker">Discipline</span>
-            <h3>Software</h3>
-            <ul><li>Python</li><li>FastAPI</li><li>React</li><li>Git</li><li>Testing</li><li>APIs</li></ul>
+            <span class="card__kicker">Skills</span>
+            <h3>Cloud &amp; Tools</h3>
+            <ul><li>AWS</li><li>Vercel</li><li>Render</li><li>Google Gemini API</li><li>Groq API</li><li>Git</li><li>GitHub</li><li>Jupyter Notebook</li><li>VS Code</li></ul>
           </div>
-          <span class="card__pair">API <i>→</i> APP</span>
+          <span class="card__pair">LOC <i>&rarr;</i> WEB</span>
         </article>
 
       </div>
@@ -402,35 +371,20 @@
             </header>
             <div class="mile__body">
               <h3>B.Tech &mdash; Computer Science &amp; Engineering</h3>
-              <p>AI / Data Science &amp; Machine Learning<br>NIAT NxtWave Institute of Advanced Technologies</p>
-              <ul class="mile__tags"><li>CGPA 8.36</li><li>2025&ndash;29</li></ul>
+              <p>AI/DS &amp; ML specialisation<br>NIAT &ndash; NxtWave Institute of Advanced Technologies</p>
+              <ul class="mile__tags"><li>CGPA 8.36 / 10</li><li>2025&ndash;29</li></ul>
             </div>
           </article>
 
           <article class="mile">
             <span class="tl__dot" aria-hidden="true"></span>
             <header class="mile__head">
-              <span class="mile__code">DEV</span>
-              <span class="mile__year">2025 &ndash; Present</span>
-            </header>
-            <div class="mile__body">
-              <h3>AI/ML &amp; Software Development</h3>
-              <p>Building AI-powered applications that combine generative AI, APIs,
-                 frontend work and automation into things people can actually use.</p>
-              <ul class="mile__tags"><li>Generative AI</li><li>APIs</li><li>Automation</li></ul>
-            </div>
-          </article>
-
-          <article class="mile">
-            <span class="tl__dot" aria-hidden="true"></span>
-            <header class="mile__head">
-              <span class="mile__code">HAK</span>
+              <span class="mile__code">GDG</span>
               <span class="mile__year">2025</span>
             </header>
             <div class="mile__body">
-              <h3>Build &amp; Grow AI Hackathon 2.0</h3>
-              <p>GDG Cloud Mumbai &mdash; competed with Team BatchCode 101, turning a
-                 real-world problem statement into a working AI product.</p>
+              <h3>Build and Grow AI Hackathon 2.0 &mdash; GDG Cloud Mumbai</h3>
+              <p>Built a working AI-enabled product in a team using Google Gemini, GitHub and automation workflows.</p>
               <ul class="mile__tags"><li>Team BatchCode 101</li><li>GDG Cloud</li></ul>
             </div>
           </article>
@@ -443,9 +397,34 @@
             </header>
             <div class="mile__body">
               <h3>Certifications</h3>
-              <p>SQL Analytics &amp; BI on Databricks &middot; Generative AI Studio (Google)
-                 &middot; Prompt Engineering with GitHub Copilot (Microsoft)</p>
+              <p>Get Started with SQL Analytics and BI on Databricks &mdash; Databricks<br>Introduction to Generative AI Studio &mdash; Google<br>Introduction to Prompt Engineering with GitHub Copilot &mdash; Microsoft / GitHub</p>
               <ul class="mile__tags"><li>Databricks</li><li>Google</li><li>Microsoft</li></ul>
+            </div>
+          </article>
+
+          <article class="mile">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <header class="mile__head">
+              <span class="mile__code">KGP</span>
+              <span class="mile__year">2026</span>
+            </header>
+            <div class="mile__body">
+              <h3>Kharagpur Data Science Hackathon (KDSH) 2026 &mdash; IIT Kharagpur</h3>
+              <p>Worked on a data science problem statement at IIT Kharagpur&rsquo;s hackathon, from understanding the data to building a solution.</p>
+              <ul class="mile__tags"><li>IIT Kharagpur</li><li>Hosted on Unstop</li></ul>
+            </div>
+          </article>
+
+          <article class="mile">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <header class="mile__head">
+              <span class="mile__code">NOW</span>
+              <span class="mile__year">Open</span>
+            </header>
+            <div class="mile__body">
+              <h3>Seeking AI/ML Engineer internships</h3>
+              <p>Looking for a team working on LLMs, RAG or LLM evaluation.</p>
+              <ul class="mile__tags"><li>Internships</li><li>AI/ML Engineer</li></ul>
             </div>
           </article>
         </div>
@@ -453,25 +432,23 @@
 
       <div class="about__col about__bio">
         <span class="card__kicker" data-reveal>Bio</span>
-        <p>I'm an AI/ML engineer in the making, working at the intersection of artificial
-          intelligence, software engineering and plain curiosity. Most of what I build starts as a
-          question I couldn't stop poking at.</p>
-        <p>I like taking an ambitious idea all the way through — data, model, deployment,
-          and the interface someone actually touches — rather than stopping at the notebook.</p>
+        <p>I'm an AI/ML engineering undergraduate &mdash; B.Tech CSE (AI/DS &amp; ML), CGPA 8.36 &mdash;
+          focused on LLMs, retrieval-augmented generation and LLM evaluation.</p>
+        <p>I build and deploy RAG systems and LLM agents with measured, citation-grounded results: hand-built
+          test sets, ragas scores, confidence intervals and tests in CI, not just a demo that works once.</p>
 
-        <h3 class="roster__title" data-reveal>Toolkit</h3>
+        <h3 class="roster__title" data-reveal>Core stack</h3>
         <ul class="roster">
-          <li>Python</li><li>C++</li><li>SQL</li><li>JavaScript</li>
-          <li>NumPy</li><li>Pandas</li><li>scikit-learn</li><li>Matplotlib</li>
-          <li>React.js</li><li>Vite</li><li>Node.js</li><li>MongoDB</li>
-          <li>Gemini API</li><li>Hugging Face</li><li>N8N</li><li>GitHub Copilot</li>
-          <li>Git</li><li>VS Code</li><li>Jupyter</li>
+          <li>Python</li><li>TypeScript</li><li>PyTorch</li><li>Hugging Face</li>
+          <li>LangChain</li><li>LangGraph</li><li>Qdrant</li><li>FAISS</li>
+          <li>FastAPI</li><li>React</li><li>Docker</li><li>GitHub Actions</li>
+          <li>Gemini API</li><li>Groq API</li><li>ragas</li><li>Supabase</li>
         </ul>
       </div>
     </div>
 
     <div class="board" aria-label="At a glance">
-      <div class="board__score"><span>Projects</span><b>03</b><s>—</s><b>06</b><span>Disciplines</span></div>
+      <div class="board__score"><span>Projects</span><b>04</b><s>—</s><b>07</b><span>Skill areas</span></div>
 
       <div class="ticker ticker--alt" aria-hidden="true">
         <div class="ticker__track" data-marquee data-dir="-1">
@@ -480,6 +457,52 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ══ LAB ══ -->
+  <section class="lab" id="lab" aria-label="Lab: earlier builds">
+    <div class="sec-head">
+      <h2 class="sec-title" data-chars>Lab</h2>
+      <p class="sec-note" data-reveal>Earlier builds — where the LLM and automation work started.</p>
+    </div>
+
+    <ul class="lab__grid">
+      <li class="exp">
+        <span class="tick tick--tl" aria-hidden="true"></span>
+        <span class="tick tick--br" aria-hidden="true"></span>
+        <span class="exp__code">ELA</span>
+        <h3>Election Assistant</h3>
+        <p>Gemini-powered guide to election processes: a 10-step visual timeline, a scored knowledge quiz and Hindi/English support.</p>
+        <ul class="tags"><li>Gemini API</li><li>React</li><li>Vite</li></ul>
+        <div class="panel__links">
+          <a class="btn-work" href="https://election-assistant-amber-ten.vercel.app" target="_blank" rel="noopener noreferrer">Live demo <i>&#8594;</i></a>
+          <a class="btn-code" href="https://github.com/prajapatipratik547-ui/election-assistant" target="_blank" rel="noopener noreferrer" aria-label="Election Assistant source code on GitHub">Code</a>
+        </div>
+      </li>
+      <li class="exp">
+        <span class="tick tick--tl" aria-hidden="true"></span>
+        <span class="tick tick--br" aria-hidden="true"></span>
+        <span class="exp__code">ATP</span>
+        <h3>AI Tips Auto-Poster</h3>
+        <p>n8n workflow that generates AI and tech tips, then publishes them through an automated social-posting pipeline.</p>
+        <ul class="tags"><li>Generative AI</li><li>N8N</li><li>APIs</li></ul>
+        <div class="panel__links">
+          <a class="btn-work" href="https://github.com/prajapatipratik547-ui/ai-tips-auto-poster" target="_blank" rel="noopener noreferrer">View on GitHub <i>&#8594;</i></a>
+        </div>
+      </li>
+      <li class="exp">
+        <span class="tick tick--tl" aria-hidden="true"></span>
+        <span class="tick tick--br" aria-hidden="true"></span>
+        <span class="exp__code">TDG</span>
+        <h3>Technical Documentation Generator</h3>
+        <p>Developer tool that analyses a codebase and generates structured technical documentation with LLMs.</p>
+        <ul class="tags"><li>LLMs</li><li>AI Agents</li><li>RAG</li></ul>
+        <div class="panel__links">
+          <a class="btn-work" href="https://ai-technical-documentation-generato.vercel.app" target="_blank" rel="noopener noreferrer">Live demo <i>&#8594;</i></a>
+          <a class="btn-code" href="https://github.com/prajapatipratik547-ui/ai-technical-documentation-generator" target="_blank" rel="noopener noreferrer" aria-label="Technical Documentation Generator source code on GitHub">Code</a>
+        </div>
+      </li>
+    </ul>
   </section>
 
   <!-- ══ CONTACT ══ -->
@@ -494,9 +517,9 @@
          target="_blank" rel="noopener noreferrer">
         <span class="crow__k">GitHub</span><span class="crow__v">github.com/prajapatipratik547-ui</span><i>&#8599;</i>
       </a>
-      <a class="crow" href="https://www.linkedin.com/in/pratik-prajapati-60a253371/"
+      <a class="crow" href="https://www.linkedin.com/in/pratikprajapati-ai"
          target="_blank" rel="noopener noreferrer">
-        <span class="crow__k">LinkedIn</span><span class="crow__v">in/pratik-prajapati-60a253371</span><i>&#8599;</i>
+        <span class="crow__k">LinkedIn</span><span class="crow__v">in/pratikprajapati-ai</span><i>&#8599;</i>
       </a>
       <a class="crow" href="Pratik_Prajapati_AI_ML_Engineer_Resume.pdf" target="_blank" rel="noopener">
         <span class="crow__k">Resume</span>
@@ -507,12 +530,12 @@
 
 </main>
 
-<footer class="footer" id="lab">
+<footer class="footer">
   <span class="footer__mark">Pratik Prajapati</span>
   <span class="footer__meta">© 2026 — AI/ML Engineer</span>
   <nav class="footer__links" aria-label="Elsewhere">
     <a href="https://github.com/prajapatipratik547-ui" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/pratik-prajapati-60a253371/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/pratikprajapati-ai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     <a href="Pratik_Prajapati_AI_ML_Engineer_Resume.pdf" target="_blank" rel="noopener">Resume</a>
   </nav>
   <button class="to-top" id="toTop" type="button">Back to top <i>↑</i></button>
@@ -522,6 +545,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-<script src="js/main.js?v=1787058993"></script>
+<script src="js/main.js?v=20261119f"></script>
 </body>
 </html>

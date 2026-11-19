@@ -37,6 +37,36 @@ function scrollTo(target) {
   else target.scrollIntoView({ behavior: 'smooth' });
 }
 
+// A shared link like /#work: the loader locks the page and Lenis owns
+// the scroll position, so the browser's own jump never lands. Do it
+// ourselves once the page is unlocked and the pins are measured.
+// It has to run after the LAST ScrollTrigger.refresh() (the one on
+// window load): a refresh re-lays the pins and knocks the scroll off.
+function jumpToHash() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  const target = id && document.getElementById(id);
+  if (!target || id === 'main') return;
+
+  // measure against the real window scroll: handing Lenis the element
+  // makes it add its own (possibly stale) scroll value and overshoot
+  const land = () => {
+    const y = Math.max(0, target.getBoundingClientRect().top + window.scrollY - 70);
+    if (lenis) lenis.scrollTo(y, { immediate: true, force: true });
+    else window.scrollTo(0, y);
+  };
+  const go = () => {
+    ScrollTrigger.refresh();
+    requestAnimationFrame(land);
+    // pins, fonts and late refreshes can still move or reset the page for
+    // a moment after load — re-check a few times and land again if knocked off
+    [300, 800, 1500].forEach(ms => setTimeout(() => {
+      if (Math.abs(target.getBoundingClientRect().top - 70) > 4) land();
+    }, ms));
+  };
+  if (document.readyState === 'complete') go();
+  else window.addEventListener('load', go, { once: true });
+}
+
 /* ── Text splitting ─────────────────────────────────────── */
 // Wraps each character so it can be animated independently.
 // Every char sits inside an overflow-hidden mask, which is what
@@ -77,12 +107,16 @@ function initNavFlip() {
   $$('[data-split]').forEach(link => {
     const text = link.textContent.trim();
     link.textContent = '';
+    // each letter is drawn twice for the flip, so screen readers
+    // would hear "W W O O R R K K" — give them the word instead
+    if (!link.hasAttribute('aria-label')) link.setAttribute('aria-label', text);
 
     [...text].forEach((c, i) => {
       if (c === ' ') { link.appendChild(document.createTextNode(' ')); return; }
 
       const wrap  = document.createElement('span');
       wrap.className = 'ch-wrap';
+      wrap.setAttribute('aria-hidden', 'true');
       const stack = document.createElement('span');
       stack.className = 'ch-stack';
       stack.style.display = 'block';
@@ -122,6 +156,7 @@ function runLoader() {
     loader.remove();
     ScrollTrigger.refresh();
     animateHero();
+    jumpToHash();
   };
 
   if (REDUCED) { finish(); return; }
@@ -451,6 +486,7 @@ function initHeader() {
       e.preventDefault();
       closeMobileNav();
       scrollTo(target);
+      if (id !== '#main') history.replaceState(null, '', id);
     });
   });
 
@@ -937,7 +973,10 @@ function initWorkGallery() {
     // land mid-slide so the counter reads the one you asked for
     const goTo = i => {
       const target = gsap.utils.clamp(0, slides.length - 1, i);
-      const p = (target + 0.5) / slides.length;
+      // the ends go all the way, or the last card stays half off-screen
+      const p = target === 0 ? 0
+              : target === slides.length - 1 ? 1
+              : (target + 0.5) / slides.length;
       const y = st.start + p * (st.end - st.start);
       if (lenis) lenis.scrollTo(y, { duration: 1.15 });
       else window.scrollTo({ top: y, behavior: 'smooth' });
@@ -1142,10 +1181,12 @@ function initAboutTimeline() {
   });
 
   // toolkit chips arrive as a wave
+  // fade + scale only: the idle drift below owns the vertical motion, and
+  // two tweens on `y` left chips stuck at 92% and 20px out of line
   gsap.from($$('.roster li'), {
-    y: 14, opacity: 0, scale: .92, duration: .45, ease: 'back.out(1.8)',
+    opacity: 0, scale: .92, duration: .45, ease: 'back.out(1.8)',
     stagger: { each: .035, from: 'start' },
-    scrollTrigger: { trigger: '.roster', start: 'top 88%' }
+    scrollTrigger: { trigger: '.roster', start: 'top 88%', once: true }
   });
 }
 
@@ -1404,7 +1445,7 @@ function initAboutMotion() {
   const chips = $$('.roster li');
   chips.forEach((chip, i) => {
     gsap.to(chip, {
-      y: -6,
+      yPercent: -18,                     // its own channel, separate from `y`
       duration: 1.6 + (i % 5) * 0.22,
       ease: 'sine.inOut',
       repeat: -1,
